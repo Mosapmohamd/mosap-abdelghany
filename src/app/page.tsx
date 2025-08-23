@@ -82,7 +82,7 @@ export default function Portfolio() {
     },
     { 
       category: "Data Visualization", 
-      items: ["Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI", "Tableau"], 
+      items: ["Matplotlib", "Seaborn", "Plotly", "Streamlit", "Power BI"], 
       level: 88,
       description: "Creating compelling visualizations and interactive dashboards"
     },
