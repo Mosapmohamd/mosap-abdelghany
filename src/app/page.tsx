@@ -138,6 +138,17 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      title: "AI Engineer",
+      company: "Core Business Solutions",
+      period: "November 2025 – Present",
+      description: "Completed an intensive training program focused on the AI engineering lifecycle. Built and deployed end-to-end machine learning models using supervised and unsupervised algorithms. Designed and trained neural networks using modern deep learning frameworks. Worked with real-world datasets from data preparation to model deployment. Optimized models for performance and accuracy and integrated them into practical AI-driven applications.",
+      achievements: [
+        'Built prediction and classification models',
+        'Designed end to end ML pipelines',
+        'Improved model performance through tuning',
+      ]
+    },
+    {
       title: "Python Instructor",
       company: "TM Academy",
       period: "November 2024 – Present",
@@ -146,6 +157,17 @@ export default function Portfolio() {
         "Taught variables, loops, conditionals, functions, and file handling",
         "Developed practical coding exercises and mini-projects",
         "Improved student coding proficiency by 40%"
+      ]
+    },
+        {
+      title: "Gen AI Trainee",
+      company: "Digital Egypt Pioneers Initiative",
+      period: "November 2025 – June 2026",
+      description: "Completed intensive training program covering the complete data science lifecycle. Gained hands-on experience with cutting-edge machine learning algorithms, deep learning frameworks, and real-world data science applications.",
+      achievements: [
+        "Mastered data collection, preprocessing, analysis, and visualization",
+        "Built end-to-end machine learning pipelines",
+        "Applied statistical techniques for data-driven decision making"
       ]
     },
     {
