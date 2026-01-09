@@ -163,11 +163,13 @@ export default function Portfolio() {
       title: "Gen AI Trainee",
       company: "Digital Egypt Pioneers Initiative",
       period: "November 2025 – June 2026",
-      description: "Completed intensive training program covering the complete data science lifecycle. Gained hands-on experience with cutting-edge machine learning algorithms, deep learning frameworks, and real-world data science applications.",
+      description: "Completed an intensive Generative AI training program focused on building and deploying AI systems powered by large language models. Worked on prompt design model fine tuning and inference workflows. Built practical GenAI solutions using real datasets and real use cases. Integrated models into applications and evaluated outputs for quality and reliability.",
       achievements: [
-        "Mastered data collection, preprocessing, analysis, and visualization",
-        "Built end-to-end machine learning pipelines",
-        "Applied statistical techniques for data-driven decision making"
+        "Designed effective prompts for task specific generation",
+        "Fine tuned and evaluated large language models",
+        "Built end to end GenAI pipelines from data to deployment",
+        "Applied NLP techniques for text generation summarization and classification",
+        "Integrated GenAI models into real applications"
       ]
     },
     {
