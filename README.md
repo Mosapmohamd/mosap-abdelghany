@@ -1,141 +1,83 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# Mosap Abdel-Ghany — Portfolio
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+Personal portfolio site for **Mosap Abdel-Ghany**, an AI Engineer specializing in production LLM systems, Retrieval-Augmented Generation (RAG), and agentic AI.
 
-## ✨ Technology Stack
+🔗 Live: [mosap-abdelghany.vercel.app](https://mosap-abdelghany.vercel.app)
 
-This scaffold provides a robust foundation built with:
+## Tech Stack
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+- **[Next.js 15](https://nextjs.org/)** (App Router) + **TypeScript**
+- **Tailwind CSS 4** + **shadcn/ui** (Radix UI primitives)
+- **next-themes** — dark/light mode
+- **lucide-react** — icons
+- Custom Node HTTP server (`server.ts`) wrapping the Next.js request handler, run via `tsx`
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+## Features
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+- Single-page portfolio: Hero, About, Skills, Projects, Experience, Certifications, Contact
+- Responsive layout with a dedicated mobile navigation menu
+- Dark/light theme toggle
+- SEO: Open Graph + Twitter card metadata, `Person` JSON-LD structured data, `sitemap.ts`
+- Optimized hero image via `next/image`
+- Clickable contact methods (`mailto:`, `tel:`, GitHub, LinkedIn)
+- Resume download button (expects `public/resume.pdf`)
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
-
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
-
-## 🚀 Quick Start
+## Getting Started
 
 ```bash
 # Install dependencies
 npm install
 
-# Start development server
+# Start the dev server (custom server via tsx + nodemon)
 npm run dev
+
+# On Windows, if `tee` isn't available, run the underlying command directly:
+npx tsx server.ts
 
 # Build for production
 npm run build
 
-# Start production server
+# Start the production server
 npm start
+
+# Lint
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-## 🤖 Powered by Z.ai
-
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
-
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+├── app/
+│   ├── page.tsx        # All portfolio sections (single-page layout)
+│   ├── layout.tsx       # Root layout, metadata, JSON-LD
+│   ├── sitemap.ts       # sitemap.xml generation
+│   ├── globals.css
+│   └── api/health/      # Simple health-check route
+├── components/
+│   ├── theme-provider.tsx
+│   ├── theme-toggle.tsx
+│   └── ui/               # shadcn/ui components
+├── hooks/
+└── lib/
+    └── utils.ts
+public/
+├── hero-bg.jpg
+├── robots.txt
+└── resume.pdf           # (add your resume here — referenced by the Hero download button)
+server.ts                 # Custom Node server wrapping Next.js
 ```
 
-## 🎨 Available Features & Components
+## Content Updates
 
-This scaffold includes a comprehensive set of modern web development tools:
+All portfolio content (bio, skills, projects, experience, certifications, contact info) lives directly in `src/app/page.tsx` as plain arrays/objects near the top of the component — update those to change what's displayed. Site-wide metadata (title, description, Open Graph, JSON-LD) lives in `src/app/layout.tsx`.
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+## Deployment
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+Deployed on [Vercel](https://vercel.com/), auto-deploying from the `main` branch of this repository.
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+## License
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
-
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
-
-## 🤝 Get Started with Z.ai
-
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
-
----
-
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+Personal project — all rights reserved.
