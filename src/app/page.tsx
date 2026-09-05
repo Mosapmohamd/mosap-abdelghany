@@ -689,15 +689,7 @@ export default function Portfolio() {
       technologies: ["Electron", "React", "TypeScript", "FastAPI", "PostgreSQL", "Clean Architecture"],
       type: "Freelance Project",
       category: "engineering",
-      showGithub: false,
-    },
-    {
-      title: "Production OS — Manufacturing Production Management System",
-      description: "Production management and BOM-tracking system for a manufacturing client, backed by Firebase Auth and Firestore. Implements a 12-sheet data model with relationships joined on ERP codes, role-based controls for BOM lock/unlock, and a full audit trail.",
-      technologies: ["Firebase", "Firestore", "Role-Based Access Control", "Data Modeling"],
-      type: "Freelance Project",
-      category: "engineering",
-      showGithub: false,
+      github: "https://github.com/Mosapmohamd/Sola",
     },
     {
       title: "Multilingual Sentiment Analysis",
@@ -1138,10 +1130,21 @@ export default function Portfolio() {
                         </Badge>
                       ))}
                     </div>
-                    <Button className="w-full" onClick={(e) => openCaseStudy("overview", e.currentTarget)}>
-                      Explore Case Study
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <div className="flex flex-col gap-2">
+                      <Button className="w-full" onClick={(e) => openCaseStudy("overview", e.currentTarget)}>
+                        Explore Case Study
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full"
+                        onClick={() => window.open("https://github.com/CarFLex-Team/Eliara-V2", "_blank")}
+                      >
+                        <Github className="mr-2 h-4 w-4" />
+                        View on GitHub
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
 
@@ -1170,9 +1173,15 @@ export default function Portfolio() {
                         </Badge>
                       ))}
                     </div>
-                    <p className="text-xs text-muted-foreground italic text-center">
-                      Code private — case study available on request
-                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => window.open("https://github.com/Mosapmohamd/Pathora", "_blank")}
+                      className="w-full"
+                    >
+                      <Github className="mr-2 h-4 w-4" />
+                      View on GitHub
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
@@ -1201,9 +1210,21 @@ export default function Portfolio() {
                             </Badge>
                           ))}
                         </div>
-                        <p className="text-xs text-muted-foreground italic text-center">
-                          Code private — case study available on request
-                        </p>
+                        {project.github ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => window.open(project.github, "_blank")}
+                            className="w-full"
+                          >
+                            <Github className="mr-2 h-4 w-4" />
+                            View on GitHub
+                          </Button>
+                        ) : (
+                          <p className="text-xs text-muted-foreground italic text-center">
+                            Code private — case study available on request
+                          </p>
+                        )}
                       </CardContent>
                     </Card>
                   ))}
