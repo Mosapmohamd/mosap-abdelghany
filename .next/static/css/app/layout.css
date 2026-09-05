@@ -1300,6 +1300,9 @@
   .bg-\(--color-bg\) {
     background-color: var(--color-bg);
   }
+  .bg-\[\#0B0F14\] {
+    background-color: #0B0F14;
+  }
   .bg-accent {
     background-color: var(--accent);
   }

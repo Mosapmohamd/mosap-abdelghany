@@ -401,8 +401,12 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">MA</span>
+              <div className="w-8 h-8 rounded-md bg-[#0B0F14] flex items-center justify-center flex-shrink-0 p-1">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <g fill="none" stroke="#22D3EE" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20,22 L20,78 M80,22 L80,78 M20,22 L50,58 L80,22" />
+                  </g>
+                </svg>
               </div>
               <div>
                 <div className="text-lg font-bold">Mosap Abdel-Ghany</div>
