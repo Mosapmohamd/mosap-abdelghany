@@ -881,7 +881,7 @@ export default function Portfolio() {
             <div className="hidden lg:block">
               <div className="relative mx-auto w-full max-w-sm aspect-[4/5] rounded-2xl overflow-hidden border border-primary/30 bg-muted/40">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.jpeg"
                   alt="Mosap Abdel-Ghany, AI Engineer"
                   fill
                   priority
